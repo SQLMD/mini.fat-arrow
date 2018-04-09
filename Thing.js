@@ -1,18 +1,19 @@
-var getEmpty = function() { return {} };
+const getEmpty = () => {
+  return {};
+};
 
 // multi-line
-var fall = function(time) {
-    var pos = 0;
-    var velocity = 0;
-    var g = 9.8;
-    for(var i = 0; i < time; i++) {
-        velocity += g;
-        pos += velocity;
-    }
-    return pos;
-}
+const fall = time => {
+  let pos = 0;
+  let velocity = 0;
+  const g = 9.8;
+  for (let i = 0; i < time; i++) {
+    velocity += g;
+    pos += velocity;
+  }
+  return pos;
+};
 
 // no args
-var rand = function() { return Math.random() }
-
-module.exports = { getEmpty, fall, rand }
+const rand = () => Math.random();
+//module.exports = { getEmpty, fall, rand };
